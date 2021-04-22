@@ -1,0 +1,8 @@
+{
+    "instances": 5,
+    "headless": true,
+    "interceptor": true,
+    "category": "ul.oneindia-retailers-alphabet-sublist.clear>li>a",
+    "category1":"body > div.oneindia-header-menu.clear.menu-with-cookie > div > nav > ul > li",
+    "showMore": "div.load-more-offers"
+}

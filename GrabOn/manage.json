@@ -1,0 +1,16 @@
+{
+    "instances": 5,
+    "headless": true,
+    "interceptor": true,
+    "category": "div.galld-r>div.gall-brow>ul.gall-catall.list-inline>li>a",
+    "product": "div.offer-card-wrapper",
+    "showMore": "div.load-more-offers",
+    "store" :"div > div.card-content-top > div.horizontal_online_content > a:nth-child(1) > span",
+    "title":"div > div.card-content-top > div.horizontal_online_content > a:nth-child(2) > div",
+    "shortTitle":"div.tile-content",
+    "code":"div.get-offer-code",
+    "desc":"span.desc-txt.more-desc>ol>li>span",
+    "veriy":"span.coupon-verification",
+    "used":"span.coupon-num-uses",
+    "link":"div.dskhjfj"
+}
