@@ -52,6 +52,7 @@ async function scrapeInfiniteScrollItems(
                     var lastVerified="";
                     var todayUsedBy="";
                     var expiry_date="";
+                    var expire_note="";
                     var short_desc="";
                     var descList = productNodeList[i].querySelectorAll(`div > div.card-content-bottom > div.offer-desc > span > ol > li`);
                     // alert(JSON.stringify(descList))
@@ -78,6 +79,10 @@ async function scrapeInfiniteScrollItems(
                     try{
                         todayUsedBy = productNodeList[i].querySelector(`div > div.card-content-top > div.title-meta > span.coupon-num-uses`).innerText.trim()
                     }catch(e){}
+
+                    try{
+                        expire_note = productNodeList[i].querySelector(`div.expiry-txt`).innerText.trim()
+                    }catch(e){}
                    
                     if(code !==null){
                   result[i] = {
@@ -87,7 +92,8 @@ async function scrapeInfiniteScrollItems(
                     code,
                     short_desc,
                     description: desc,
-                    expiry_date
+                    expiry_date,
+                    expire_note
                     // day: date.format(currDate,"DD MM YYYY")
                   };
                 }

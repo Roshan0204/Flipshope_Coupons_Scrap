@@ -117,6 +117,7 @@ async function scrapeInfiniteScrollItems(
                     var shortTitle="";
                     var lastVerified="";
                     var todayUsedBy="";
+                    var expire_note="";
                     try{
                    valid= productNodeList[i].querySelector(`div>ul.veri>li.visible-lg.c-clk`).innerText.trim()
                     }catch(e){
@@ -142,6 +143,12 @@ async function scrapeInfiniteScrollItems(
                                      }catch(e){
                  
                                      }
+
+                                 try{
+                                    expire_note= productNodeList[i].querySelector(`div>ul.veri>li.visible-lg.c-clk`).innerText.trim()
+                                        }catch(e){
+                    
+                                        }
                                      if(code !==null){
                   result[i] = {
                     store,
@@ -150,7 +157,8 @@ async function scrapeInfiniteScrollItems(
                     code,
                     short_desc:specs,
                     description:desc,
-                    expiry_date:valid
+                    expiry_date:valid,
+                    expire_note
                     // day: date.format(currDate,"DD MM YYYY")
                   };
                 }

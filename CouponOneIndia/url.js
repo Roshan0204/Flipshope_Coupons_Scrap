@@ -53,6 +53,7 @@ async function scrapeInfiniteScrollItems(
                     var lastVerified="";
                     var todayUsedBy="";
                     var expiry_date="";
+                    var expire_note="";
                     var short_desc="";
                     var desc=[];
                     var descList = productNodeList[i].querySelectorAll(`div.oneindia-description-holder.empty>div>table>tbody>tr`);
@@ -80,6 +81,9 @@ async function scrapeInfiniteScrollItems(
                     try{
                         lastVerified= productNodeList[i].getAttribute('div>div>div>div>div>span.oneindia-verified-time')
                     }catch(e){}
+                    try{
+                        expire_note= productNodeList[i].getAttribute('div>div>div>div>div>span.oneindia-voucher-time-expiring')
+                    }catch(e){}
 
                     if(code !==null){
                    
@@ -90,7 +94,8 @@ async function scrapeInfiniteScrollItems(
                     code,
                     short_desc,
                     description:desc,
-                    expiry_date
+                    expiry_date,
+                    expire_note
                     // day: date.format(currDate,"DD MM YYYY")
                   };
                 }

@@ -23,7 +23,7 @@ extension = 'csv'
 list_of_files = [i for i in glob.glob('*.{}'.format(extension))]
 # print(list_of_files)
 file_out = "coupons.csv"
-csv_header = 'store,title,short_title,code,short_desc,description,expiry_date'
+csv_header = 'store,title,short_title,code,short_desc,description,expiry_date,expire_note'
 csv_merge = open(file_out, 'w')
 csv_merge.write(csv_header)
 csv_merge.write('\n')
