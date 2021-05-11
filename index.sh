@@ -13,3 +13,4 @@ echo "GrabOn Done !"
 cd ..
 python merger.py
 echo "File Merged Successfully"
+cp -R csv_data/coupons.csv /root/Flipshope_Admin_Panel/Backend/
