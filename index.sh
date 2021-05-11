@@ -1,13 +1,13 @@
 #!/bin.sh 
-cd /CouponOneIndia/
+cd CouponOneIndia/
 sh index.sh
 echo "OneIndia Done !"
 cd ..
-cd /CouponsDuniya/
+cd CouponsDuniya/
 sh index.sh
 echo "Coupon Duniya Done !"
 cd ..
-cd /GrabOn/
+cd GrabOn/
 sh index.sh
 echo "GrabOn Done !"
 cd ..
